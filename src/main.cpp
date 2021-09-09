@@ -1,6 +1,21 @@
+/*
+  ____________________________________________
+             HYPERREALISM 2021
+                created by Sir Obsidian
+  
+  This is a very cool project.
+  If you steal it you're incredibly uncool.
+  Like seriously this is VERY cool.
+  LIKE I WILL FIND YOU AND KILL YOU,
+  if you steal my work :> 
+  So yea, don't steal my work, it's PRECIOUS.
+  MY PRECCIOUUSSSSSSSSSSSSSSSSSSSs.
+  ____________________________________________
+*/
+
 #include <SDL2/SDL.h>
 
-#include <stdio.h>
+#include <iostream>
 #include <cstdio>
 #include <string>
 #include <sstream>
@@ -10,12 +25,7 @@
 #define WINDOW_TITLE    "Hello SDL2!"
 #define WINDOW_TEXT     "Hello World!"
 
-
-// We make a custom stream handler for brievity
-inline std::ostream& operator<<(std::ostream& os, SDL_version const& v) {
-    os << int(v.major) << '.' << int(v.minor) << '.' << int(v.patch);
-    return os;
-}
+using namespace std;
 
 //---------------------------------------------------------------------
 //  MAIN
@@ -55,8 +65,12 @@ int main(int argc, char* args[]) {
         while(SDL_PollEvent(&wEvent)) {
             switch (wEvent.type) {
                 case SDL_QUIT:              eQuit = true; break;
-                case SDL_KEYDOWN:           eQuit = true; break;
-                case SDL_MOUSEBUTTONDOWN:   eQuit = true; break;
+                case SDL_KEYDOWN: 
+                    cout << SDL_GetKeyName(wEvent.key.keysym.sym) << "\n";
+                    break;
+                case SDL_MOUSEBUTTONDOWN:
+                    cout << "x: " << wEvent.button.x << " y: " << wEvent.button.y << "\n";
+                    break;
                 case SDL_WINDOWEVENT_CLOSE: eQuit = true; break;
             default:
                 //SDL_Log("Window %d got unknown event %d\n", wEvent.window.windowID, wEvent.window.event);

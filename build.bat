@@ -20,6 +20,4 @@ cd build
 cmake ..
 cd ..
 cmake --build build --config Release
-echo [HYPERREALISM] Executing..
-%CD%/build/Release/main
 echo [HYPERREALISM] Script finished.
