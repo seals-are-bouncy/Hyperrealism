@@ -65,7 +65,7 @@ gui_update() {
     // // Normally user code doesn't need/want to call this because positions are saved in .ini file anyway. 
     // // Here we just want to make the demo initial state a bit more friendly!
     // igSetNextWindowPos((struct ImVec2){0,0}, ImGuiCond_FirstUseEver,(struct ImVec2){0,0} ); 
-    igShowDemoWindow(NULL);
+//    igShowDemoWindow(NULL);
 }
 
 
