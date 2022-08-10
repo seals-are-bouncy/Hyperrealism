@@ -17,6 +17,7 @@ cmake --build build
 
 The studio is the program used to create Hyperrealism projects for the Engine.
 - To compile the Studio the git project needs to be cloned recursively due to dependencies.
+- To compile the Studio you can run the commands in the following order:
 ```
 cd Studio
 mkdir -p build
