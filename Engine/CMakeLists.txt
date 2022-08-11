@@ -27,6 +27,7 @@ include_directories(${GLFW_DIR}/include)
 # Dear ImGui
 set(IMGUI_DIR ../libs/imgui)
 include_directories(${IMGUI_DIR} ${IMGUI_DIR}/backends ..)
+file(GLOB imgui_sources ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp ${IMGUI_DIR}/backends/imgui_impl_vulkan.cpp ${IMGUI_DIR}/imgui.cpp ${IMGUI_DIR}/imgui_draw.cpp ${IMGUI_DIR}/imgui_demo.cpp ${IMGUI_DIR}/imgui_tables.cpp ${IMGUI_DIR}/imgui_widgets.cpp)
 
 # Libraries
 find_package(Vulkan REQUIRED)
@@ -40,6 +41,6 @@ include_directories(${GLFW_DIR}/deps)
 
 file(GLOB sources src/*.cpp)
 
-add_executable(hyperrealism ${sources} ${IMGUI_DIR}/backends/imgui_impl_glfw.cpp ${IMGUI_DIR}/backends/imgui_impl_vulkan.cpp ${IMGUI_DIR}/imgui.cpp ${IMGUI_DIR}/imgui_draw.cpp ${IMGUI_DIR}/imgui_demo.cpp ${IMGUI_DIR}/imgui_tables.cpp ${IMGUI_DIR}/imgui_widgets.cpp)
+add_executable(hyperrealism ${sources} ${imgui_sources})
 target_link_libraries(hyperrealism ${LIBRARIES})
 target_compile_definitions(hyperrealism PUBLIC -DImTextureID=ImU64)
