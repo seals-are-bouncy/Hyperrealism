@@ -24,3 +24,7 @@ mkdir -p build
 cmake -B build/ .
 cmake --build build
 ```
+
+## Credits.
+
+Thank you 'Dear Imgui' for your amazing GUI project. Without your examples Hyperrealism could never exist.
