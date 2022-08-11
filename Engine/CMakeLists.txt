@@ -3,8 +3,8 @@
 #  cd build
 #  cmake -g "Visual Studio 14 2015" ..
 
-cmake_minimum_required(VERSION 2.8)
-project(hyperrealism_vulkan_renderer C CXX)
+cmake_minimum_required(VERSION 3.15)
+project(hyperrealism_vulkan_renderer DESCRIPTION "A C++ Photorealistic 3D Engine." VERSION 0.0.1)
 
 if(NOT CMAKE_BUILD_TYPE)
   set(CMAKE_BUILD_TYPE Debug CACHE STRING "" FORCE)
