@@ -1,5 +1,1 @@
-*.o
-Engine/build
-Studio/build
-Studio/bin
-*.ini
+builddir
