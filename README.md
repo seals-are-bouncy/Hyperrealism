@@ -1,6 +1,6 @@
 # Hyperrealism
 
-Hyperrealism is a very photorealistic rendering engine written in C++.
+Hyperrealism is a very photorealistic rendering engine written in C.
 
 this project uses meson.
 
